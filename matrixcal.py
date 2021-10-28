@@ -1,3 +1,4 @@
+import math
 class MatrixCalculator:
     def plus(matrix1,matrix2):
         result = []
@@ -59,7 +60,7 @@ class MatrixCalculator:
                     calbuffer = 0
                     for a in range(len(matrix1[i])):
                         calbuffer += matrix1[i][a] * newmatrix2[j][a]
-                    result[i].append(calbuffer)
+                    result[i].append(round(calbuffer,4))
             
             return result
     
@@ -106,7 +107,13 @@ class MatrixCalculator:
         return result
 
                         
-                        
+    def matrixpow(matrix,time):
+        result = matrix
+        for i in range(1,time):
+            result = MatrixCalculator.matrixmultiply(result,matrix)
+        return result
+            
+
 
                 
                 

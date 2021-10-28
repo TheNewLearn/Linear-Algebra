@@ -38,8 +38,27 @@ ans1_d = mc.inv(a)
 
 answer_list[3].append(ans1_d)
 
-print(answer_list)
 
+answer_list_2 = []
+
+
+t = [[1/6,1/2,1/3],[1/2,1/4,1/4],[1/3,1/4,5/12]]
+answer_list_2.append(mc.matrixpow(t,5))
+answer_list_2.append(mc.matrixpow(t,10))
+answer_list_2.append(mc.matrixpow(t,20))
+answer_list_2.append(mc.matrixpow(t,30))
+
+
+for i in range(len(answer_list)):
+    for j in answer_list[i]:
+        print("Answer1."+str(i+1)+": ",end="")
+        print(j)
+        print(" ")
+
+
+for i in answer_list_2:
+    print(i)
+    print(" ")
 
 
 
